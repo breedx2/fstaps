@@ -7,19 +7,19 @@
 
 <div class='boardouter'>
 	<div class='board'>
-	<h1 class='floor'>Upstairs:</h1>
-
-	{% for tap in downstairs %}
-
-	<b>{{ tap.name }}</b><br/>
-
-	{% endfor %}
+		<h1 class='floor'>Upstairs:</h1>
+		{% for tap in upstairs %}
+		<b>{{ tap.name }}</b><br/>
+		{% endfor %}
 	</div>
 </div>
 
 <div class='boardouter'>
 	<div class='board'>
 	<h1 class='floor'>Downstairs:</h1>
+		{% for tap in downstairs %}
+		<b>{{ tap.name }}</b><br/>
+		{% endfor %}
 	</div>
 </div>
 

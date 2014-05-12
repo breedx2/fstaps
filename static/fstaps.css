@@ -14,13 +14,16 @@ body {
 .board {
 	background-image: url(/static/chalkboard-background1.jpg);
 	margin-top: 50px;
-	margin-right: 50px;
-	margin-left: 50px;
-	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 400px;
+	width: 50%;
 	padding: 0px 50px 50px 50px;
 	border: solid #D6B05C 10px;
 	border-radius: 20px;
 	min-height: 300px;
+	font-family: "chalk6";
+	font-size: 30px;
 }
 
 .board h1 {
@@ -32,7 +35,36 @@ body {
 	
 }
 
+a {
+	text-decoration: none;
+}
+
 @font-face {
 	font-family: "chalk1";
 	src: local("chalk1"), url( /static/fonts/KGSecondChancesSketch.ttf ) format("truetype"); /* non-IE */
+}
+
+@font-face {
+	font-family: "chalk2";
+	src: local("chalk2"), url( /static/fonts/KGSecondChancesSolid.ttf ) format("truetype"); /* non-IE */
+}
+
+@font-face {
+	font-family: "chalk3";
+	src: local("chalk3"), url( /static/fonts/KGTangledUpInYou2.ttf ) format("truetype"); /* non-IE */
+}
+
+@font-face {
+	font-family: "chalk4";
+	src: local("chalk4"), url( /static/fonts/KGTangledUpInYou.ttf ) format("truetype"); /* non-IE */
+}
+
+@font-face {
+	font-family: "chalk5";
+	src: local("chalk5"), url( /static/fonts/TENOCLOCK-Regular.ttf ) format("truetype"); /* non-IE */
+}
+
+@font-face {
+	font-family: "chalk6";
+	src: local("chalk6"), url( /static/fonts/VTKS%20ANIMAL%202.ttf ) format("truetype"); /* non-IE */
 }
