@@ -1,7 +1,27 @@
 <html>
 <head>
+	<title>FlightStats tap list! </title>
+	<link rel="stylesheet" type="text/css" media="all" href="/static/fstaps.css">
 </head>
 <body>
-hi.
+
+<div class='boardouter'>
+	<div class='board'>
+	<h1 class='floor'>Upstairs:</h1>
+
+	{% for tap in downstairs %}
+
+	<b>{{ tap.name }}</b><br/>
+
+	{% endfor %}
+	</div>
+</div>
+
+<div class='boardouter'>
+	<div class='board'>
+	<h1 class='floor'>Downstairs:</h1>
+	</div>
+</div>
+
 </body>
 </html>

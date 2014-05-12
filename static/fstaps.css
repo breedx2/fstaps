@@ -1,0 +1,38 @@
+
+html { 
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	padding: 0px;
+	margin: 50px 0 0 0;
+	background-color: #464646;
+	color: white;
+}
+
+.board {
+	background-image: url(/static/chalkboard-background1.jpg);
+	margin-top: 50px;
+	margin-right: 50px;
+	margin-left: 50px;
+	width: auto;
+	padding: 0px 50px 50px 50px;
+	border: solid #D6B05C 10px;
+	border-radius: 20px;
+	min-height: 300px;
+}
+
+.board h1 {
+	font-family: "chalk1";
+	font-size: 60px;
+	/*color: #77dd77;*/
+	color: #779ECB;
+	/*color: ##AEC6CF;*/
+	
+}
+
+@font-face {
+	font-family: "chalk1";
+	src: local("chalk1"), url( /static/fonts/KGSecondChancesSketch.ttf ) format("truetype"); /* non-IE */
+}

@@ -10,16 +10,16 @@ class Tap(object):
 
 @app.route('/')
 def tap_list():
-	downstairs = { 
-		'left': Tap('Deschutes', 'Mirror Pond', '5'), 
-		'middle': Tap('Something', 'Face Melter', '9.1'),
-		'right': Tap('Other', 'Another Brew', '4.5')
-	}
-	upstairs = { 
-		'left': Tap('Donkey Pond', 'Hair Dog', '7'), 
-		'middle': Tap('Smarmy Beast', 'Sm00th Times', '5.3'),
-		'right': Tap('Oregone', 'Locals Only', '5.2')
-	}
+	downstairs = [ 
+		Tap('Deschutes', 'Mirror Pond', '5'), 
+		Tap('Something', 'Face Melter', '9.1'),
+		Tap('Other', 'Another Brew', '4.5')
+	]
+	upstairs = [
+		Tap('Donkey Pond', 'Hair Dog', '7'), 
+		Tap('Smarmy Beast', 'Sm00th Times', '5.3'),
+		Tap('Oregone', 'Locals Only', '5.2')
+	]
 	taps = { 'upstairs': upstairs, 'downstairs': downstairs }
 	print taps
 	return render_template('fstaps.html', **taps)
