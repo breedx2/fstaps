@@ -15,12 +15,20 @@ body {
 	margin-bottom: 20px;
 }
 
-.board {
+.upstairs {
 	background-image: url(/static/chalkboard-background1.jpg);
+}
+
+.downstairs {
+	background-image: url(/static/chalkboard-background2.jpg);
+}
+
+.board {
 	margin-top: 50px;
 	margin-left: auto;
 	margin-right: auto;
 	min-width: 400px;
+	max-width: 600px;
 	width: 50%;
 	padding: 0px 50px 50px 50px;
 	border: solid #D6B05C 10px;
@@ -44,8 +52,22 @@ a {
 	text-decoration: none;
 }
 
+table {
+	width: 100%;
+}
+
+td {
+	height: 60px;
+}
+
 .tap {
 	font-size: 30px;
+}
+
+.beerstyle {
+	font-size: 16px;
+	font-family: "chalk1";
+	color: #aaaaaa;
 }
 
 @font-face {
@@ -60,7 +82,7 @@ a {
 
 @font-face {
 	font-family: "chalk3";
-	src: local("chalk3"), url( /static/fonts/KGTangledUpInYou2.ttf ) format("truetype"); /* non-IE */
+	src: local("chalk3"), url( /static/fonts/Chalkboard_by_Marta_van_Eck.ttf ) format("truetype"); /* non-IE */
 }
 
 @font-face {
@@ -79,19 +101,47 @@ a {
 	src: local("chalk6"), url( /static/fonts/VTKS%20ANIMAL%202.ttf ) format("truetype"); /* non-IE */
 }
 
+@font-face {
+	font-family: "chalk7";
+	src: local("chalk7"), url( /static/fonts/vtks%20noise.ttf ) format("truetype"); /* non-IE */
+}
+
+@font-face {
+	font-family: "chalk8";
+	src: local("chalk8"), url( /static/fonts/vtks%20chalk%2079.ttf ) format("truetype"); /* non-IE */
+}
+
+@font-face {
+	font-family: "chalk9";
+	src: local("chalk9"), url( /static/fonts/KGTangledUpInYou2.ttf ) format("truetype"); /* non-IE */
+}
+
 .brewery {
+	color: #cccccc;
 	font-size: 12px;
 	padding-left: 8px;
 	margin-bottom: 15px;
 }
 
+.tapwrap {
+}
+
+.meta {
+	font-size: 18px;
+	margin-left: 30px;
+	color: #999999;
+}
+
 .chalk1 { font-family: 'chalk1'; }
 .chalk2 { font-family: 'chalk2'; font-weight: normal;}
-.chalk3 { font-family: 'chalk3'; }
-.chalk4 { font-family: 'chalk4'; font-size: 40px; margin-top: 28px; }
-.chalk5 { font-family: 'chalk5'; }
+.chalk3 { font-family: 'chalk3'; font-size: 40px; margin-top: 40px;}
+.chalk4 { font-family: 'chalk4'; font-size: 40px; }
+.chalk5 { font-family: 'chalk5'; font-size: 38px; margin-bottom: -6px;}
 .chalk6 { font-family: 'chalk6'; }
+.chalk7 { font-family: 'chalk7'; font-size: 50px; margin-bottom: -10px; margin-top: -10px;}
+.chalk8 { font-family: 'chalk8'; font-size: 40px; margin-bottom: -5px;}
 
 .pastel1 { color: #F49AC2; }
 .pastel2 { color: #77dd77; }
 .pastel3 { color: #FDFD96; }
+.pastel4 { color: #B39EB5; }

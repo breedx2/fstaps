@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>FlightStats tap list! </title>
@@ -6,22 +7,54 @@
 <body>
 
 <div class='boardouter'>
-	<div class='board'>
+	<div class='board upstairs'>
 		<h1 class='floor'>Upstairs:</h1>
+		<table>
 		{% for tap in upstairs %}
-		<div class='tap pastel{{tap.get_color_index(3)}} chalk{{tap.get_index(6)}}'>{{ tap.name }}</div>
-		<div class='brewery'>{{tap.brewery}}</div>
+		<tr>
+		<td class='tapwrap'>
+			<div class='tap pastel{{tap.get_color_index(4)}} chalk{{tap.get_index(9)}}'>
+			{{ tap.name }}
+			{% if tap.style %}
+			<span class='beerstyle'>({{ tap.style }})</span>
+			{% endif %}
+			</div>
+			<div class='brewery'>{{tap.brewery}}</div>
+		</td>
+		<td>
+			{% if tap.abv %}
+			<div class='meta'>{{ tap.abv }} abv</div>
+			{% endif %}
+		</td>
+		</tr>
 		{% endfor %}
+		</table>
 	</div>
 </div>
 
 <div class='boardouter'>
-	<div class='board'>
+	<div class='board downstairs'>
 	<h1 class='floor'>Downstairs:</h1>
+		<table>
 		{% for tap in downstairs %}
-		<div class='tap pastel{{tap.get_color_index(3)}} chalk{{tap.get_index(6)}}'>{{ tap.name }}</div>
-		<div class='brewery'>{{tap.brewery}}</div>
+		<tr>
+		<td class='tapwrap'>
+			<div class='tap pastel{{tap.get_color_index(4)}} chalk{{tap.get_index(9)}}'>
+			{{ tap.name }}
+			{% if tap.style %}
+			<span class='beerstyle'>({{ tap.style }})</span>
+			{% endif %}
+			</div>
+			<div class='brewery'>{{tap.brewery}}</div>
+		</td>
+		<td>
+			{% if tap.abv %}
+			<div class='meta'>{{ tap.abv }} abv</div>
+			{% endif %}
+		</td>
+		</tr>
 		{% endfor %}
+		</table>
 	</div>
 </div>
 
