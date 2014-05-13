@@ -11,6 +11,10 @@ body {
 	color: white;
 }
 
+.floor { 
+	margin-bottom: 20px;
+}
+
 .board {
 	background-image: url(/static/chalkboard-background1.jpg);
 	margin-top: 50px;
@@ -29,6 +33,7 @@ body {
 .board h1 {
 	font-family: "chalk1";
 	font-size: 60px;
+	font-weight: normal;
 	/*color: #77dd77;*/
 	color: #779ECB;
 	/*color: ##AEC6CF;*/
@@ -37,6 +42,10 @@ body {
 
 a {
 	text-decoration: none;
+}
+
+.tap {
+	font-size: 30px;
 }
 
 @font-face {
@@ -56,6 +65,7 @@ a {
 
 @font-face {
 	font-family: "chalk4";
+	font-size: 50px;
 	src: local("chalk4"), url( /static/fonts/KGTangledUpInYou.ttf ) format("truetype"); /* non-IE */
 }
 
@@ -68,3 +78,20 @@ a {
 	font-family: "chalk6";
 	src: local("chalk6"), url( /static/fonts/VTKS%20ANIMAL%202.ttf ) format("truetype"); /* non-IE */
 }
+
+.brewery {
+	font-size: 12px;
+	padding-left: 8px;
+	margin-bottom: 15px;
+}
+
+.chalk1 { font-family: 'chalk1'; }
+.chalk2 { font-family: 'chalk2'; font-weight: normal;}
+.chalk3 { font-family: 'chalk3'; }
+.chalk4 { font-family: 'chalk4'; font-size: 40px; margin-top: 28px; }
+.chalk5 { font-family: 'chalk5'; }
+.chalk6 { font-family: 'chalk6'; }
+
+.pastel1 { color: #F49AC2; }
+.pastel2 { color: #77dd77; }
+.pastel3 { color: #FDFD96; }

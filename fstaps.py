@@ -7,6 +7,10 @@ class Tap(object):
 		self.brewery = brewery
 		self.name = name
 		self.abv = abv
+	def get_index(self, max):
+		return (hash(self.name) % max) + 1
+	def get_color_index(self, max):
+		return (hash(self.name + self.brewery + self.abv) % max) + 1
 
 @app.route('/')
 def tap_list():

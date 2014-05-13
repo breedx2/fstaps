@@ -9,7 +9,8 @@
 	<div class='board'>
 		<h1 class='floor'>Upstairs:</h1>
 		{% for tap in upstairs %}
-		<b>{{ tap.name }}</b><br/>
+		<div class='tap pastel{{tap.get_color_index(3)}} chalk{{tap.get_index(6)}}'>{{ tap.name }}</div>
+		<div class='brewery'>{{tap.brewery}}</div>
 		{% endfor %}
 	</div>
 </div>
@@ -18,7 +19,8 @@
 	<div class='board'>
 	<h1 class='floor'>Downstairs:</h1>
 		{% for tap in downstairs %}
-		<b>{{ tap.name }}</b><br/>
+		<div class='tap pastel{{tap.get_color_index(3)}} chalk{{tap.get_index(6)}}'>{{ tap.name }}</div>
+		<div class='brewery'>{{tap.brewery}}</div>
 		{% endfor %}
 	</div>
 </div>
