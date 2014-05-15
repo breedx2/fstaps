@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import yaml
 
 app = Flask(__name__)
 
@@ -15,6 +16,14 @@ class Tap(object):
 		return (hash(self.name) % max) + 1
 	def get_color_index(self, max):
 		return (hash("%s%s%s" %(self.name, self.brewery, self.abv)) % max) + 1
+	def nice_tap_date(self):
+		if self.date_tapped is None:
+			return None
+		return "Mar. 23rd"
+
+def save(data, filename):
+	stream = file(filename, 'w')
+	yaml.dump(data, stream)
 
 @app.route('/')
 def tap_list():
@@ -29,7 +38,9 @@ def tap_list():
 		Tap('Oregone', 'Locals Only', abv = '5.2')
 	]
 	taps = { 'upstairs': upstairs, 'downstairs': downstairs }
+	#save(taps, "taps.yaml")
 	print taps
+	print yaml.dump(taps)
 	return render_template('fstaps.html', **taps)
 
 if __name__ == '__main__':
