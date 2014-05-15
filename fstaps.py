@@ -20,27 +20,27 @@ class Tap(object):
 		if self.date_tapped is None:
 			return None
 		return "Mar. 23rd"
+	def to_dict(self):
+		return { 'brewery': self.brewery, 'name': self.name, 'style': self.style, 'abv': self.abv, 'date_tapped': self.date_tapped }
+	@staticmethod
+	def from_dict(data):
+		return Tap(brewery = data['brewery'], name = data['name'], style = data['style'], abv = data['abv'], date_tapped = data['date_tapped'])
+
+def to_dicts(taps):
+	return { k: map(lambda x: x.to_dict(), v) for k,v in taps.iteritems() }
 
 def save(data, filename):
 	stream = file(filename, 'w')
 	yaml.dump(data, stream)
 
+def load(filename):
+	stream = file(filename, 'r')
+	return yaml.load(stream)
+
 @app.route('/')
 def tap_list():
-	downstairs = [ 
-		Tap('Deschutes', 'Mirror Pond', abv = '5', style = 'Pale Ale'), 
-		Tap('Something', 'Face Melter', abv = '9.1', date_tapped = '2014-02-01'),
-		Tap('Other', 'Another Brew', style = 'Amazeballs')
-	]
-	upstairs = [
-		Tap('Donkey Pond', 'Hair Dog', abv = '7'), 
-		Tap('Smarmy Beast', 'Sm00th Times', style = 'Yeti', abv = '5.3'),
-		Tap('Oregone', 'Locals Only', abv = '5.2')
-	]
-	taps = { 'upstairs': upstairs, 'downstairs': downstairs }
-	#save(taps, "taps.yaml")
-	print taps
-	print yaml.dump(taps)
+	raw_data = load('fstaps.yaml')
+	taps = { k: map(lambda x: Tap.from_dict(x), v) for k, v in raw_data.iteritems() }
 	return render_template('fstaps.html', **taps)
 
 if __name__ == '__main__':
