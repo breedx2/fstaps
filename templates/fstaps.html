@@ -3,15 +3,17 @@
 <head>
 	<title>FlightStats tap list! </title>
 	<link rel="stylesheet" type="text/css" media="all" href="/static/fstaps.css">
+	<script type="text/javascript" src="/static/jquery.js"></script>
+	<script type="text/javascript" src="/static/fstaps.js"></script>
 </head>
 <body>
 
 <div class='boardouter'>
 	<div class='board upstairs'>
 		<h1 class='floor'>Upstairs:</h1>
-		<table>
+		<table class='taps'>
 		{% for tap in upstairs %}
-		<tr>
+		<tr class="taprow" onclick="alert('hi')">
 		<td class='tapwrap'>
 			<div class='tap pastel{{tap.get_color_index(4)}} chalk{{tap.get_index(9)}}'>
 			{{ tap.name }}
@@ -48,8 +50,17 @@
 			<div class='brewery'>{{tap.brewery}}</div>
 		</td>
 		<td>
-			{% if tap.abv %}
-			<div class='meta'>{{ tap.abv }} abv</div>
+			{% if tap.abv or tap.date_tapped %}
+			<div class='meta'>
+				{% if tap.abv %} 
+					{{ tap.abv }} abv
+					{% if tap.date_tapped %}<br/>{% endif %}
+				{% endif %}
+
+				{% if tap.date_tapped %}
+					{{ tap.nice_tap_date() }}
+				{% endif %}
+			</div>
 			{% endif %}
 		</td>
 		</tr>

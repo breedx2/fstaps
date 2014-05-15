@@ -56,6 +56,11 @@ table {
 	width: 100%;
 }
 
+tr.taprow {
+	vertical-align: top;
+	cursor: pointer;
+}
+
 td {
 	height: 60px;
 }
@@ -130,12 +135,13 @@ td {
 	font-size: 18px;
 	margin-left: 30px;
 	color: #999999;
+	line-height: 25px;
 }
 
 .chalk1 { font-family: 'chalk1'; }
 .chalk2 { font-family: 'chalk2'; font-weight: normal;}
 .chalk3 { font-family: 'chalk3'; font-size: 40px; margin-top: 40px;}
-.chalk4 { font-family: 'chalk4'; font-size: 40px; }
+.chalk4 { font-family: 'chalk4'; font-size: 40px; margin-top: 18px;}
 .chalk5 { font-family: 'chalk5'; font-size: 38px; margin-bottom: -6px;}
 .chalk6 { font-family: 'chalk6'; }
 .chalk7 { font-family: 'chalk7'; font-size: 50px; margin-bottom: -10px; margin-top: -10px;}
