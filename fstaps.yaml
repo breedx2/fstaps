@@ -1,5 +1,5 @@
 downstairs:
-- {abv: '5', brewery: Deschutes, date_tapped: null, name: Mirror Pond, style: Pale
+- {abv: '6', brewery: Deschutes, date_tapped: null, name: Mirror Pond, style: Pale
     Ale}
 - {abv: '9.1', brewery: Something, date_tapped: '2014-02-01', name: Face Melter, style: null}
 - {abv: null, brewery: Other, date_tapped: null, name: Another Brew, style: Amazeballs}

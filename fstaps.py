@@ -40,8 +40,9 @@ def load(filename):
 @app.route('/')
 def tap_list():
 	raw_data = load('fstaps.yaml')
-	taps = { k: map(lambda x: Tap.from_dict(x), v) for k, v in raw_data.iteritems() }
-	return render_template('fstaps.html', **taps)
+	bartaps= { k: map(lambda x: Tap.from_dict(x), v) for k, v in raw_data.iteritems() }
+	#return render_template('fstaps.html', **bartaps)
+	return render_template('fstaps.html', bars=bartaps)
 
 if __name__ == '__main__':
 	debug = True

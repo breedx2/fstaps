@@ -8,37 +8,12 @@
 </head>
 <body>
 
+{% for barname,taps in bars.iteritems() %}
 <div class='boardouter'>
-	<div class='board upstairs'>
-		<h1 class='floor'>Upstairs:</h1>
-		<table class='taps'>
-		{% for tap in upstairs %}
-		<tr class="taprow" onclick="alert('hi')">
-		<td class='tapwrap'>
-			<div class='tap pastel{{tap.get_color_index(4)}} chalk{{tap.get_index(9)}}'>
-			{{ tap.name }}
-			{% if tap.style %}
-			<span class='beerstyle'>({{ tap.style }})</span>
-			{% endif %}
-			</div>
-			<div class='brewery'>{{tap.brewery}}</div>
-		</td>
-		<td>
-			{% if tap.abv %}
-			<div class='meta'>{{ tap.abv }} abv</div>
-			{% endif %}
-		</td>
-		</tr>
-		{% endfor %}
-		</table>
-	</div>
-</div>
-
-<div class='boardouter'>
-	<div class='board downstairs'>
-	<h1 class='floor'>Downstairs:</h1>
+	<div class='board {{barname}}'>
+	<h1 class='floor'>{{barname|title}}:</h1>
 		<table>
-		{% for tap in downstairs %}
+		{% for tap in taps %}
 		<tr>
 		<td class='tapwrap'>
 			<div class='tap pastel{{tap.get_color_index(4)}} chalk{{tap.get_index(9)}}'>
@@ -68,6 +43,7 @@
 		</table>
 	</div>
 </div>
+{% endfor %}
 
 </body>
 </html>
