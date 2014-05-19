@@ -1,5 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, url_for, redirect
 import yaml
+
+DATAFILE='fstaps.yaml'
 
 app = Flask(__name__)
 
@@ -39,10 +41,31 @@ def load(filename):
 
 @app.route('/')
 def tap_list():
-	raw_data = load('fstaps.yaml')
+	raw_data = load(DATAFILE) 
 	bartaps= { k: map(lambda x: Tap.from_dict(x), v) for k, v in raw_data.iteritems() }
-	#return render_template('fstaps.html', **bartaps)
 	return render_template('fstaps.html', bars=bartaps)
+
+@app.route('/edit', methods=['POST'])
+def edit_tap():
+	raw_data = load(DATAFILE)
+	bartaps= { k: map(lambda x: Tap.from_dict(x), v) for k, v in raw_data.iteritems() }
+
+	barname = request.form['barname']
+	index = int(request.form['index']) - 1
+
+	name = request.form['name']
+	brewery = request.form['brewery']
+	style = request.form['style']
+	abv = request.form['abv']
+	#TODO: date tapped
+
+	new_tap = Tap(name=name, brewery=brewery, style=style, abv=abv)
+	bartaps[barname][index] = new_tap
+
+	save(to_dicts(bartaps), DATAFILE)
+
+	return redirect('/')
+	
 
 if __name__ == '__main__':
 	debug = True

@@ -20,7 +20,7 @@
 		<div class='editform' id='edit_{{barname}}_{{loop.index}}'>
 			<form id='form.{{barname}}.{{loop.index}}' method='POST' action='/edit'>
 			<input type='hidden' name='barname' value='{{barname}}'/>
-			<input type='hidden' name='old.name' value='{{tap.name}}'/>
+			<input type='hidden' name='index' value='{{loop.index}}'/>
 			<h1>{{barname|title}} tap {{loop.index}}</h1>
 			<table>
 			<tr><td>Name:</td><td><input type='text' name='name' value='{{tap.name}}'/></td></tr>

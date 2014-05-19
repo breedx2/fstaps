@@ -1,7 +1,8 @@
 downstairs:
-- {abv: '6', brewery: Deschutes, date_tapped: null, name: Mirror Pond, style: Pale
-    Ale}
-- {abv: '9.1', brewery: Something, date_tapped: '2014-02-01', name: Face Melter, style: null}
+- {abv: !!python/unicode '6', brewery: !!python/unicode 'Deschutes', date_tapped: null,
+  name: !!python/unicode 'Mirror Pond2', style: !!python/unicode 'Pale Ale'}
+- {abv: !!python/unicode '29.3', brewery: !!python/unicode 'Tomahawk', date_tapped: null,
+  name: !!python/unicode 'Face Melter', style: !!python/unicode 'Imperial'}
 - {abv: null, brewery: Other, date_tapped: null, name: Another Brew, style: Amazeballs}
 upstairs:
 - {abv: '7', brewery: Donkey Pond, date_tapped: null, name: Hair Dog, style: null}
