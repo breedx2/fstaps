@@ -2,7 +2,7 @@ FlightStats taps
 ================
 
 This project is a simple HTML display board for the taps at FlightStats.
-It's adopts the ubiquitous chalkboard model, including some chalk-fonts
+It adopts the ubiquitous chalkboard model, including some chalk-fonts
 and blinding pastels.
 
 It's written in python + flask with a little hand-rolled html + jquery.
