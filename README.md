@@ -23,3 +23,10 @@ $ source env/bin/activate
 $ easy_install flask PyYAML inflect 
 $ python fstaps.py
 ```
+
+TODO
+----
+Would be nice to have:
+* "Just tapped" sticker for taps within the last business day
+* Hyperlinks for more info about a given beer
+* [your feature here]
