@@ -1,13 +1,26 @@
 
 function showEdit(barName, index){
-	for(i = 1; i < 4; i++){
-		$('#edit_' + barName + '_' + i).hide();
-		$('#' + barName + i).hide();
-	}
-	$('#floor_' + barName).hide();
-	$('#edit_' + barName + '_' + index).show();
+	showOrHideGroups(barName, index, true);
 }
 
 function hideEdit(barName, index){
-	//TODO
+	showOrHideGroups(barName, index, false);
+}
+
+function showOrHideGroups(barName, index, show){
+	for(i = 1; i < 4; i++){
+		showOrHide($('#edit_' + barName + '_' + i), false);
+		showOrHide($('#' + barName + i), !show);
+	}
+	showOrHide($('#floor_' + barName), !show);
+	showOrHide($('#edit_' + barName + '_' + index), show);
+}
+
+function showOrHide(obj, show){
+	if(show){
+		obj.show();
+	}	
+	else{
+		obj.hide();
+	}
 }

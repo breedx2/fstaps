@@ -181,3 +181,12 @@ input {
 	border: none;
 	border-radius: 5px;
 }
+
+button, input[type=submit] {
+	border: none;
+	font-family: 'chalk6';
+	font-size: 14px;
+	background-color: #678EbB;
+	padding: 8px;
+	border-radius: 5px;
+}
