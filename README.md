@@ -14,3 +14,12 @@ for development and does not reflect the current tap list (in fact, it's fake!)
 
 Please fork this project and make moar awesomer!  Thanks!
 
+Install/Run
+-----------
+
+```
+$ virtualenv --no-site-packages env
+$ source env/bin/activate
+$ easy_install flask PyYAML inflect 
+$ python fstaps.py
+```
