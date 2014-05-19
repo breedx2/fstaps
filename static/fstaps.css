@@ -50,6 +50,9 @@ img.logo {
 	min-height: 300px;
 	font-family: "chalk6";
 	font-size: 30px;
+	-webkit-box-shadow: 10px 10px 37px 9px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 37px 9px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 37px 9px rgba(0,0,0,0.75);
 }
 
 .board h1 {

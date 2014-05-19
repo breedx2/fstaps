@@ -1,10 +1,9 @@
 downstairs:
-- {abv: !!python/unicode '6', brewery: !!python/unicode 'Deschutes', date_tapped: null,
-  name: !!python/unicode 'Mirror Pond2', style: !!python/unicode 'Pale Ale'}
-- {abv: !!python/unicode '29.3', brewery: !!python/unicode 'Tomahawk', date_tapped: null,
-  name: !!python/unicode 'Face Melter', style: !!python/unicode 'Imperial'}
-- {abv: null, brewery: Other, date_tapped: null, name: Another Brew, style: Amazeballs}
+- {abv: '6', brewery: Deschutes, date_tapped: '2014-05-23', name: Mirror Pond, style: Pale
+    Ale}
+- {abv: '29.3', brewery: Tomahawk country, date_tapped: null, name: Face Melter, style: Imperial}
+- {abv: '', brewery: Other, date_tapped: null, name: Another Brew, style: Amazeballs}
 upstairs:
-- {abv: '7', brewery: Donkey Pond, date_tapped: null, name: Hair Dog, style: null}
+- {abv: '7', brewery: Donkey Pond, date_tapped: '', name: Hair Dog, style: None}
 - {abv: '5.3', brewery: Smarmy Beast, date_tapped: null, name: Sm00th Times, style: Yeti}
 - {abv: '5.2', brewery: Oregone, date_tapped: null, name: Locals Only, style: null}

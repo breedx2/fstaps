@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request, url_for, redirect
+import datetime
+import inflect
 import yaml
 
 DATAFILE='fstaps.yaml'
@@ -21,7 +23,9 @@ class Tap(object):
 	def nice_tap_date(self):
 		if self.date_tapped is None:
 			return None
-		return "Mar. 23rd"
+		d = datetime.datetime.strptime(self.date_tapped, "%Y-%m-%d")
+		month_name = d.strftime("%b")
+		return "%s %s" % (month_name, inflect.engine().ordinal(d.day))
 	def to_dict(self):
 		return { 'brewery': self.brewery, 'name': self.name, 'style': self.style, 'abv': self.abv, 'date_tapped': self.date_tapped }
 	@staticmethod
@@ -33,7 +37,7 @@ def to_dicts(taps):
 
 def save(data, filename):
 	stream = file(filename, 'w')
-	yaml.dump(data, stream)
+	yaml.safe_dump(data, stream)
 
 def load(filename):
 	stream = file(filename, 'r')
@@ -53,18 +57,21 @@ def edit_tap():
 	barname = request.form['barname']
 	index = int(request.form['index']) - 1
 
+	new_tap = new_tap_from_request()
+	bartaps[barname][index] = new_tap
+
+	print to_dicts(bartaps)
+	save(to_dicts(bartaps), DATAFILE)
+
+	return redirect('/')
+
+def new_tap_from_request():
 	name = request.form['name']
 	brewery = request.form['brewery']
 	style = request.form['style']
 	abv = request.form['abv']
-	#TODO: date tapped
-
-	new_tap = Tap(name=name, brewery=brewery, style=style, abv=abv)
-	bartaps[barname][index] = new_tap
-
-	save(to_dicts(bartaps), DATAFILE)
-
-	return redirect('/')
+	date_tapped = request.form['date_tapped']
+	return Tap(name=name, brewery=brewery, style=style, abv=abv, date_tapped=date_tapped)
 	
 
 if __name__ == '__main__':
