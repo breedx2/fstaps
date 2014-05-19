@@ -10,5 +10,5 @@ Data is persisted in a yaml file.
 
 There is no security -- any user can edit the tap list.
 
-Please feel free to fork and make moar awesomer.
+Please fork this project and make moar awesomer!  Thanks!
 
