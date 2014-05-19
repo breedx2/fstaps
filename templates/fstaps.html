@@ -15,9 +15,23 @@
 {% for barname,taps in bars.iteritems() %}
 <div class='boardouter'>
 	<div class='board {{barname}}'>
-		<h1 class='floor'>{{barname|title}}:</h1>
+		<h1 id='floor_{{barname}}' class='floor'>{{barname|title}}:</h1>
 		{% for tap in taps %}
-		<div class='taprow' onclick='alert("hi")'>
+		<div class='editform' id='edit_{{barname}}_{{loop.index}}'>
+			<form id='form.{{barname}}.{{loop.index}}'>
+			<h1>{{barname|title}} tap {{loop.index}}</h1>
+			<table>
+			<tr><td>Name:</td><td><input type='text' name='name' value='{{tap.name}}'/></td></tr>
+			<tr><td>Style:</td><td><input type='text' name='style' value='{{tap.style}}'/></td></tr>
+			<tr><td>Brewery:</td><td><input type='text' name='brewery' value='{{tap.brewery}}'/></td></tr>
+			<tr><td>ABV:</td><td><input type='text' name='abv' value='{{tap.abv}}'/></td></tr>
+			<tr><td>Save</td><td>Cancel</td></tr>
+			</table>
+			</form>
+		</div>
+		{% endfor %}
+		{% for tap in taps %}
+		<div class='taprow' id='{{barname}}{{loop.index}}' onclick="showEdit('{{barname}}', '{{loop.index}}')">
 			<div class='meta'>
 				{% if tap.abv %} 
 					{{ tap.abv }} abv

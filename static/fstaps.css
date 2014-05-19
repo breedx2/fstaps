@@ -167,3 +167,17 @@ td {
 .pastel2 { color: #77dd77; }
 .pastel3 { color: #FDFD96; }
 .pastel4 { color: #B39EB5; }
+
+.editform {
+	display: none;
+	font-family: 'chalk6';
+	font-size: 14px;
+}
+
+input {
+	font-family: 'chalk6';
+	font-size: 14px;
+	padding: 8px;
+	border: none;
+	border-radius: 5px;
+}
