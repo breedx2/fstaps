@@ -8,39 +8,36 @@
 </head>
 <body>
 
+<div class='logo'>
+	<a href='http://flightstats.com'><img class='logo' src='/static/fs-logo-rot.png' alt='flightstats'/></a>
+</div>
+
 {% for barname,taps in bars.iteritems() %}
 <div class='boardouter'>
 	<div class='board {{barname}}'>
-	<h1 class='floor'>{{barname|title}}:</h1>
-		<table>
+		<h1 class='floor'>{{barname|title}}:</h1>
 		{% for tap in taps %}
-		<tr>
-		<td class='tapwrap'>
-			<div class='tap pastel{{tap.get_color_index(4)}} chalk{{tap.get_index(9)}}'>
-			{{ tap.name }}
-			{% if tap.style %}
-			<span class='beerstyle'>({{ tap.style }})</span>
-			{% endif %}
-			</div>
-			<div class='brewery'>{{tap.brewery}}</div>
-		</td>
-		<td>
-			{% if tap.abv or tap.date_tapped %}
+		<div class='taprow' onclick='alert("hi")'>
 			<div class='meta'>
 				{% if tap.abv %} 
 					{{ tap.abv }} abv
 					{% if tap.date_tapped %}<br/>{% endif %}
 				{% endif %}
-
 				{% if tap.date_tapped %}
 					{{ tap.nice_tap_date() }}
 				{% endif %}
 			</div>
-			{% endif %}
-		</td>
-		</tr>
+			<div class='tapwrap'>
+				<div class='tap pastel{{tap.get_color_index(4)}} chalk{{tap.get_index(9)}}'>
+				{{ tap.name }}
+				{% if tap.style %}
+				<span class='beerstyle'>({{ tap.style }})</span>
+				{% endif %}
+				</div>
+				<div class='brewery'>{{tap.brewery}}</div>
+			</div>
+		</div>
 		{% endfor %}
-		</table>
 	</div>
 </div>
 {% endfor %}

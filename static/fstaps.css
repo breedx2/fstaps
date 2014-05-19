@@ -5,10 +5,24 @@ html {
 }
 
 body {
-	padding: 0px;
-	margin: 50px 0 0 0;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
 	background-color: #464646;
 	color: white;
+}
+
+a {
+	text-decoration: none;
+}
+
+.logo {
+	float: top;
+	text-align: right;
+	z-index: 20;
+}
+
+img.logo {
+	width: 60px;
 }
 
 .floor { 
@@ -24,13 +38,13 @@ body {
 }
 
 .board {
-	margin-top: 50px;
+	margin-bottom: 50px;
 	margin-left: auto;
 	margin-right: auto;
 	min-width: 400px;
 	max-width: 600px;
 	width: 50%;
-	padding: 0px 50px 50px 50px;
+	padding: 0px 50px 0px 50px;
 	border: solid #D6B05C 10px;
 	border-radius: 20px;
 	min-height: 300px;
@@ -56,9 +70,9 @@ table {
 	width: 100%;
 }
 
-tr.taprow {
-	vertical-align: top;
+.taprow {
 	cursor: pointer;
+	height: 82px;
 }
 
 td {
@@ -132,19 +146,21 @@ td {
 }
 
 .meta {
-	font-size: 18px;
+	font-size: 16px;
 	margin-left: 30px;
 	color: #999999;
 	line-height: 25px;
+	float: right;
+	text-align: right;
 }
 
 .chalk1 { font-family: 'chalk1'; }
 .chalk2 { font-family: 'chalk2'; font-weight: normal;}
 .chalk3 { font-family: 'chalk3'; font-size: 40px; margin-top: 40px;}
-.chalk4 { font-family: 'chalk4'; font-size: 40px; margin-top: 18px;}
+.chalk4 { font-family: 'chalk4'; font-size: 40px; padding-top: 18px;}
 .chalk5 { font-family: 'chalk5'; font-size: 38px; margin-bottom: -6px;}
 .chalk6 { font-family: 'chalk6'; }
-.chalk7 { font-family: 'chalk7'; font-size: 50px; margin-bottom: -10px; margin-top: -10px;}
+.chalk7 { font-family: 'chalk7'; font-size: 50px; margin-bottom: -10px; margin-top: 0px;}
 .chalk8 { font-family: 'chalk8'; font-size: 40px; margin-bottom: -5px;}
 
 .pastel1 { color: #F49AC2; }
