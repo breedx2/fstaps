@@ -49,6 +49,33 @@ def tap_list():
 	bartaps= { k: map(lambda x: Tap.from_dict(x), v) for k, v in raw_data.iteritems() }
 	return render_template('fstaps.html', bars=bartaps)
 
+@app.route('/downstairs')
+def downstairs():
+	return single_bar_render('downstairs')
+
+@app.route('/kitchen')
+def kitchen():
+	return single_bar_render('downstairs', 'kitchen')
+
+@app.route('/upstairs')
+def upstairs():
+	return single_bar_render('upstairs')
+
+@app.route('/sprucegoose')
+def sprucegoose():
+	return single_bar_render('upstairs', 'Spruce Goose')
+
+@app.route('/tenforward')
+def tenforward():
+	return single_bar_render('upstairs', 'Ten Forward')
+
+def single_bar_render(which_bar, alias):
+	if not alias:
+		alias = which_bar
+	raw_data = load(DATAFILE) 
+	bartaps= { k: map(lambda x: Tap.from_dict(x), v) for k, v in raw_data.iteritems() }
+	return render_template('fstaps.html', bars={alias: bartaps[which_bar]})
+
 @app.route('/edit', methods=['POST'])
 def edit_tap():
 	raw_data = load(DATAFILE)

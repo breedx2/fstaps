@@ -27,6 +27,7 @@ img.logo {
 
 .floor { 
 	margin-bottom: 20px;
+	margin-top: 25px;
 }
 
 .upstairs {
@@ -44,7 +45,7 @@ img.logo {
 	min-width: 400px;
 	max-width: 600px;
 	width: 50%;
-	padding: 0px 50px 0px 50px;
+	padding: 0px 50px 15px 50px;
 	border: solid #D6B05C 10px;
 	border-radius: 20px;
 	min-height: 300px;
