@@ -30,11 +30,11 @@ img.logo {
 	margin-top: 25px;
 }
 
-.upstairs {
+.upstairs, .Spruce, .Forward {
 	background-image: url(/static/chalkboard-background1.jpg);
 }
 
-.downstairs {
+.downstairs, .kitchen {
 	background-image: url(/static/chalkboard-background2.jpg);
 }
 

@@ -51,7 +51,7 @@ def tap_list():
 
 @app.route('/downstairs')
 def downstairs():
-	return single_bar_render('downstairs')
+	return single_bar_render('downstairs', 'downstairs')
 
 @app.route('/kitchen')
 def kitchen():
@@ -59,7 +59,7 @@ def kitchen():
 
 @app.route('/upstairs')
 def upstairs():
-	return single_bar_render('upstairs')
+	return single_bar_render('upstairs', 'upstairs')
 
 @app.route('/sprucegoose')
 def sprucegoose():
