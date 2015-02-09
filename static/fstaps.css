@@ -56,6 +56,55 @@ img.logo {
 	box-shadow: 10px 10px 37px 9px rgba(0,0,0,0.75);
 }
 
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) 
+{
+.board {
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 400px;
+	width: 100%;
+   height: 100%;
+	padding: 0px 50px 15px 50px;
+	border: solid #D6B05C 10px;
+	border-radius: 20px;
+	min-height: 300px;
+	font-family: "chalk6";
+	font-size: 30px;
+	-webkit-box-shadow: 10px 10px 37px 9px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 37px 9px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 37px 9px rgba(0,0,0,0.75);
+}
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 1)
+{
+.board {
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 400px;
+	width: 100%;
+   height: 100%;
+	padding: 0px 50px 15px 50px;
+	border: solid #D6B05C 10px;
+	border-radius: 20px;
+	min-height: 300px;
+	font-family: "chalk6";
+	font-size: 30px;
+	-webkit-box-shadow: 10px 10px 37px 9px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 37px 9px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 37px 9px rgba(0,0,0,0.75);
+}
+}
+
 .board h1 {
 	font-family: "chalk1";
 	font-size: 60px;
