@@ -27,7 +27,7 @@ RUN echo "Installing git" && \
     echo "...."
     
 RUN echo "Installing python" && \
-    bash -c "apt-get install -qq --force-yes build-essential python2.7 python2.7-dev python-pip && \
+    bash -c "apt-get install -qq --force-yes build-essential python2.7 python2.7-dev python-pip" && \
     bash -c "pip install -U pip" && \
     bash -c "pip install virtualenv" && \
     echo "python Installed" && \
