@@ -41,7 +41,7 @@ $ docker run -p 80:80 -p 222:22 alexwitherspoon/fstaps
 
 Use Container
 
-Browse to http://<Container-IP>:80/
+Browse to http://Container-IP:80/
 
 or
 
