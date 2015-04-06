@@ -24,6 +24,41 @@ $ easy_install flask PyYAML inflect
 $ python fstaps.py
 ```
 
+Docker Container
+-----------
+
+Get Container
+
+```
+$ docker pull alexwitherspoon/fstaps
+```
+
+Run Container
+
+```
+$ docker run -p 80:80 -p 222:22 alexwitherspoon/fstaps
+```
+
+Use Container
+
+Browse to http://<Container-IP>:80/
+
+or
+
+SSH as user "root", using password "beer" on port 222.
+```
+$ ssh -p 222 -l root <Container-IP>
+```
+
+Toss Container
+
+```
+$ docker ps -a
+$ docker stop <instance-id>
+$ docker rm <instance-id>
+$ docker rmi <image-id>
+```
+
 TODO
 ----
 Would be nice to have:
