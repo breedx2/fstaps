@@ -103,4 +103,4 @@ def new_tap_from_request():
 
 if __name__ == '__main__':
 	debug = True
-	app.run(host='0.0.0.0', debug = debug)
+	app.run(host='0.0.0.0',  port=80, debug = debug)
