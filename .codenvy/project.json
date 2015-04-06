@@ -1,1 +1,0 @@
-{"mixinTypes":["contribution"],"runners":{"configs":{}},"builders":{"configs":{}},"description":"Display board for the taps at FlightStats.","type":"blank","attributes":{"contribute_branch":["master"],"contribute_mode":["contribute"]}}
