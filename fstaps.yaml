@@ -4,6 +4,6 @@ downstairs:
 - {abv: '29.3', brewery: Tomahawk country, date_tapped: null, name: Face Melter, style: Imperial}
 - {abv: '', brewery: Other, date_tapped: null, name: Another Brew, style: Amazeballs}
 upstairs:
-- {abv: '7', brewery: Donkey Pond, date_tapped: '', name: Hair Dog, style: None}
+- {abv: '7', brewery: Monkey Pond, date_tapped: '', name: Hair Dog, style: None}
 - {abv: '5.3', brewery: Smarmy Beast, date_tapped: null, name: Sm00th Times, style: Yeti}
 - {abv: '5.2', brewery: Oregone, date_tapped: null, name: Locals Only, style: null}

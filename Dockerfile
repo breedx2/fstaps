@@ -3,7 +3,7 @@
 FROM debian:wheezy
 
 # Network Ports Used by App
-EXPOSE 80
+EXPOSE 5000
 EXPOSE 22
 
 # Commands to Stage OS
