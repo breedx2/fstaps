@@ -1,6 +1,8 @@
 # FlightStats taps Server
 # https://github.com/alexwitherspoon/fstaps
-FROM debian:wheezy
+FROM alexwitherspoon/debian
+
+MAINTAINER Alex Witherspoon <alex@alexwitherspoon.com>
 
 # Network Ports Used by App
 EXPOSE 80
